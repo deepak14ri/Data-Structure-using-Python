@@ -1,5 +1,6 @@
 C#
 
+
 #include<stdio.h> 
  
 int findElement(int arr[], int n, 
@@ -43,7 +44,7 @@ def findElement(arr, n, key):
 			return i 
 	return -1
 
-arr = [12, 34, 10, 6, 40] 
+arr = list(map(int,input().split()))
 key = 40
 n = len(arr) 
 index = findElement(arr, n, key) 
