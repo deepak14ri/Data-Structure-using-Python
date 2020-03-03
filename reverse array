@@ -1,0 +1,51 @@
+//C
+INPUT:  6
+        1 2 3 4 5 6
+OUTPUT: 6 5 4 3 2 1
+
+
+#include <stdio.h>
+
+void revInt(int ar[],int s,int e){
+    int temp;
+    while(s<e){
+        temp = ar[s];
+        ar[s] = ar[e];
+        ar[e] = temp;
+        s++;
+        e--;
+    }
+}
+void printArr(int ar[],int size){
+    for(int i=0;i<size;i++){
+        printf("%d ",ar[i]);
+    }
+}
+
+int main(void) {
+    int t;
+    scanf("%d",&t);
+    int ar[t];
+    
+    int i;
+    for(i=0;i<t;i++){
+        scanf("%d ",&ar[i]);
+    }
+    int n = sizeof(ar)/sizeof(int);
+    printArr(ar,n);
+	revInt(ar,0,n-1);
+	printf("\nreverse array is ");
+	printArr(ar,n);
+	
+	return 0;
+}
+
+#Python
+
+int(input())
+arr = list(map(int,input().split()))
+ar = arr[::-1]
+for i in range(len(ar)):
+     print(ar[i],end=' ')
+
+
